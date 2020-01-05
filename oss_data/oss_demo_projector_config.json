@@ -1,27 +1,27 @@
 {
   "embeddings": [
     {
-      "metadataPath": "http://wikipedia2vec.github.io/projector_files/data.tsv",
+      "metadataPath": "https://wikipedia2vec.github.io/projector_files/data.tsv",
       "tensorName": "Wikipedia2Vec 10K",
-      "tensorPath": "http://wikipedia2vec.github.io/projector_files/emb.tsv",
+      "tensorPath": "https://wikipedia2vec.github.io/projector_files/emb.tsv",
       "tensorShape": [
         10000,
         100
       ]
     },
     {
-      "metadataPath": "http://wikipedia2vec.github.io/projector_files/data_entity.tsv",
+      "metadataPath": "https://wikipedia2vec.github.io/projector_files/data_entity.tsv",
       "tensorName": "Wikipedia2Vec 10K (entity only)",
-      "tensorPath": "http://wikipedia2vec.github.io/projector_files/emb_entity.tsv",
+      "tensorPath": "https://wikipedia2vec.github.io/projector_files/emb_entity.tsv",
       "tensorShape": [
         10000,
         100
       ]
     },
     {
-      "metadataPath": "http://wikipedia2vec.github.io/projector_files/data_nolg.tsv",
+      "metadataPath": "https://wikipedia2vec.github.io/projector_files/data_nolg.tsv",
       "tensorName": "Wikipedia2Vec 10K (no link_graph)",
-      "tensorPath": "http://wikipedia2vec.github.io/projector_files/emb_nolg.tsv",
+      "tensorPath": "https://wikipedia2vec.github.io/projector_files/emb_nolg.tsv",
       "tensorShape": [
         10000,
         100
