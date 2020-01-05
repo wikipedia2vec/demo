@@ -2,18 +2,6 @@
   <meta charset="UTF-8">
   <meta name="keywords" content="visualization,embeddings,machine learning,javascript">
 
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="Embedding projector - visualization of high-dimensional data">
-  <meta property="og:description" content="Visualize high dimensional data.">
-  <meta property="og:url" content="http://projector.tensorflow.org">
-  <meta property="og:image" content="http://projector.tensorflow.org/preview.png">
-
-  <meta name="twitter:card" value="summary_large_image">
-  <meta name="twitter:title" content="Embedding projector - visualization of high-dimensional data">
-  <meta name="twitter:description" content="Visualize high dimensional data.">
-  <meta name="twitter:url" content="http://projector.tensorflow.org">
-  <meta name="twitter:image" content="http://projector.tensorflow.org/preview.png">
-
   <meta http-equiv="cache-control" content="max-age=0">
   <meta http-equiv="cache-control" content="no-cache">
   <meta http-equiv="expires" content="0">
@@ -23,7 +11,7 @@
   <meta name="author" content="Daniel Smilkov, Nikhil Thorat, Charles Nicholson, Big Picture">
 
   <link rel="icon" type="image/png" href="../favicon.png">
-  
+
   <script>/**
  * @license
  * Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
@@ -8366,7 +8354,7 @@ Polymer({is:"paper-input-char-counter",behaviors:[Polymer.PaperInputAddonBehavio
 
       <div class="label-and-input-container" id="labelAndInputContainer">
         <slot name="label"></slot>
-        
+
         <slot name="input"></slot><slot name="after-input"></slot>
       </div>
 
@@ -10572,11 +10560,11 @@ this.labels3DVisualizer&&q.addVisualizer(this.labels3DVisualizer);this.canvasLab
       }
     </style>
 
-    
-    
+
+
     <div id="mirror" class="mirror-text" aria-hidden="true">&nbsp;</div>
 
-    
+
     <div class="textarea-container fit">
       <textarea id="textarea" name$="[[name]]" aria-label$="[[label]]" autocomplete$="[[autocomplete]]" autofocus$="[[autofocus]]" inputmode$="[[inputmode]]" placeholder$="[[placeholder]]" readonly$="[[readonly]]" required$="[[required]]" disabled$="[[disabled]]" rows$="[[rows]]" minlength$="[[minlength]]" maxlength$="[[maxlength]]"></textarea>
     </div>
@@ -10752,18 +10740,18 @@ paper-textarea {
       </paper-tooltip>
     </div>
     <div id="icon-container">
-      
+
       <paper-icon-button id="expand-more" icon="expand-less" on-tap="_expandMore"></paper-icon-button>
       <paper-icon-button id="expand-less" style="display: none" icon="expand-more" on-tap="_expandLess"></paper-icon-button>
     </div>
   </div>
   <iron-collapse id="panel">
-    
+
     <div id="state-section">
       <template is="dom-if" if="[[!savedStates.length]]">
         <p id="no-bookmarks">
             No bookmarks yet, upload a bookmarks file or add a new bookmark by clicking the "+" below.
-        
+
       </template>
 
       <template is="dom-repeat" items="{{savedStates}}">
@@ -11068,12 +11056,12 @@ _disabledChanged:function(b){Polymer.IronControlState._disabledChanged.apply(thi
   <template>
     <style include="paper-dropdown-menu-shared-styles"></style>
 
-    
+
     <span role="button"></span>
     <paper-menu-button id="menuButton" vertical-align="[[verticalAlign]]" horizontal-align="[[horizontalAlign]]" dynamic-align="[[dynamicAlign]]" vertical-offset="[[_computeMenuVerticalOffset(noLabelFloat)]]" disabled="[[disabled]]" no-animations="[[noAnimations]]" on-iron-select="_onIronSelect" on-iron-deselect="_onIronDeselect" opened="{{opened}}" close-on-activate allow-outside-scroll="[[allowOutsideScroll]]" restore-focus-on-close="[[restoreFocusOnClose]]">
       <div class="dropdown-trigger" slot="dropdown-trigger">
         <paper-ripple></paper-ripple>
-        
+
         <paper-input type="text" invalid="[[invalid]]" readonly disabled="[[disabled]]" value="[[selectedItemLabel]]" placeholder="[[placeholder]]" error-message="[[errorMessage]]" always-float-label="[[alwaysFloatLabel]]" no-label-float="[[noLabelFloat]]" label="[[label]]">
           <iron-icon icon="paper-dropdown-menu:arrow-drop-down" suffix slot="suffix"></iron-icon>
         </paper-input>
@@ -11395,7 +11383,7 @@ paper-dropdown-menu paper-item {
 </style>
 <div class="title">DATA</div>
 <div class="container">
-  
+
   <template is="dom-if" if="[[_hasChoices(runNames)]]">
     <paper-dropdown-menu no-animations label="[[_getNumRunsLabel(runNames)]] found">
       <paper-listbox attr-for-selected="value" class="dropdown-content" selected="{{selectedRun}}" slot="dropdown-content">
@@ -11409,7 +11397,7 @@ paper-dropdown-menu paper-item {
   </template>
 
   <template is="dom-if" if="[[tensorNames]]">
-    
+
     <paper-dropdown-menu no-animations label="[[_getNumTensorsLabel(tensorNames)]] found">
       <paper-listbox attr-for-selected="value" class="dropdown-content" selected="{{selectedTensor}}" slot="dropdown-content">
         <template is="dom-repeat" items="[[tensorNames]]">
@@ -11426,7 +11414,7 @@ paper-dropdown-menu paper-item {
 
   <div hidden$="[[!_hasChoices(colorOptions)]]">
     <div class="colorlabel-container">
-      
+
       <paper-dropdown-menu id="labelby" no-animations label="Label by">
         <paper-listbox attr-for-selected="value" class="dropdown-content" selected="{{selectedLabelOption}}" slot="dropdown-content">
           <template is="dom-repeat" items="[[labelOptions]]">
@@ -11436,7 +11424,7 @@ paper-dropdown-menu paper-item {
           </template>
         </paper-listbox>
       </paper-dropdown-menu>
-      
+
       <paper-dropdown-menu id="colorby" no-animations label="Color by">
         <paper-listbox attr-for-selected="value" class="dropdown-content" selected="{{selectedColorOptionName}}" slot="dropdown-content">
           <template is="dom-repeat" items="[[colorOptions]]">
@@ -11462,7 +11450,7 @@ paper-dropdown-menu paper-item {
     </template>
   </div>
   <template is="dom-if" if="[[_hasChoice(labelOptions)]]">
-    
+
     <div hidden$="[[!showSuperviseSettings]]" class="supervise-settings">
       <paper-dropdown-menu no-animations label="Supervise with">
         <paper-listbox attr-for-selected="value" class="dropdown-content" on-selected-item-changed="superviseColumnChanged" selected="{{superviseColumn}}" slot="dropdown-content">
@@ -11476,7 +11464,7 @@ paper-dropdown-menu paper-item {
       <paper-input value="{{superviseInput}}" label="{{superviseInputLabel}}" on-change="superviseInputChange" on-input="superviseInputTyping">
       </paper-input>
     </div>
-    
+
     <div class="metadata-editor">
       <paper-dropdown-menu no-animations label="Edit by">
         <paper-listbox attr-for-selected="value" class="dropdown-content" slot="dropdown-content" on-selected-item-changed="metadataEditorColumnChange" selected="{{metadataEditorColumn}}">
@@ -11576,15 +11564,15 @@ paper-dropdown-menu paper-item {
           <p>
             If you'd like to share your visualization with the world, follow these simple steps.
             See <a target="_blank" href="https://www.tensorflow.org/get_started/embedding_viz">this tutorial</a> for more.
-          
+
           <h4><span class="step-label">Step 1:</span> Make data public</h4>
           <p>
             Host tensors, metadata, sprite image, and bookmarks TSV files <i>publicly</i> on the web.
-          
+
           <p>
             One option is using a <a target="_blank" href="https://gist.github.com/">github gist</a>.
             If you choose this approach, make sure to link directly to the raw file.
-          
+
         </div>
         <div>
           <h4><span class="step-label">Step 2:</span> Projector config</h4>
@@ -12550,7 +12538,7 @@ g.enableResetFilterButton(!1)};this.clearSelectionButton.onclick=function(){e.ad
   font-size: 12px;
   padding: 3px 3px;
 }
-    
+
 .metadata-value {
   overflow-wrap: break-word;
 }
@@ -12734,7 +12722,7 @@ zc=this&&this.__extends||function(){var a=Object.setPrototypeOf||{__proto__:[]}i
       <div data-tab="umap" id="umap-tab" class="ink-tab projection-tab">UMAP</div>
       <paper-tooltip for="umap-tab" position="bottom" animation-delay="0" fit-to-visible-bounds>
         uniform manifold approximation and projection
-      </paper-tooltip>      
+      </paper-tooltip>
 
       <div data-tab="tsne" id="tsne-tab" class="ink-tab projection-tab">t-SNE</div>
       <paper-tooltip for="tsne-tab" position="bottom" animation-delay="0" fit-to-visible-bounds>
@@ -12754,7 +12742,7 @@ zc=this&&this.__extends||function(){var a=Object.setPrototypeOf||{__proto__:[]}i
     </div>
   </div>
   <div class="container">
-     
+
      <div data-panel="umap" class="ink-panel-content">
       <div class="slider">
         <label>Dimension</label>
@@ -12778,18 +12766,18 @@ zc=this&&this.__extends||function(){var a=Object.setPrototypeOf||{__proto__:[]}i
       </div>
       <p>
         <button id="run-umap" class="ink-button" title="Run UMAP" on-tap="runUmap">Run</button>
-      
+
       <p id="umap-sampling" class="notice">
         For faster results, the data will be sampled down to [[getUmapSampleSizeText()]] points.
-      
+
       <p>
         <iron-icon icon="book" class="book-icon"></iron-icon>
         <a target="_blank" rel="noopener" href="https://umap-learn.readthedocs.io/en/latest/how_umap_works.html">
           Learn more about UMAP.
         </a>
-      
+
     </div>
-    
+
     <div data-panel="tsne" class="ink-panel-content">
       <div class="slider">
         <label>Dimension</label>
@@ -12842,22 +12830,22 @@ zc=this&&this.__extends||function(){var a=Object.setPrototypeOf||{__proto__:[]}i
         <button class="run-tsne ink-button" title="Re-run t-SNE">Run</button>
         <button class="pause-tsne ink-button" title="Pause t-SNE">Pause</button>
         <button class="perturb-tsne ink-button" title="Perturb t-SNE">Perturb</button>
-      
+
       <p>Iteration: <span class="run-tsne-iter">0</span>
       <p id="tsne-sampling" class="notice">
         For faster results, the data will be sampled down to [[getTsneSampleSizeText()]] points.
-      
+
       <p>
         <iron-icon icon="book" class="book-icon"></iron-icon>
         <a target="_blank" href="http://distill.pub/2016/misread-tsne/">
           How to use t-SNE effectively.
         </a>
-      
+
     </div>
-    
+
     <div data-panel="pca" class="ink-panel-content">
       <div class="two-columns">
-        <div> 
+        <div>
           <paper-dropdown-menu class="pca-dropdown" vertical-align="bottom" no-animations label="X">
             <paper-listbox attr-for-selected="value" class="dropdown-content" selected="{{pcaX}}" slot="dropdown-content">
               <paper-item disabled class="dropdown-item header">
@@ -12887,7 +12875,7 @@ zc=this&&this.__extends||function(){var a=Object.setPrototypeOf||{__proto__:[]}i
             </paper-listbox>
           </paper-dropdown-menu>
         </div>
-        <div> 
+        <div>
           <paper-dropdown-menu class="pca-dropdown" vertical-align="bottom" no-animations label="Y">
             <paper-listbox attr-for-selected="value" class="dropdown-content" selected="{{pcaY}}" slot="dropdown-content">
               <paper-item disabled class="dropdown-item header">
@@ -12908,13 +12896,13 @@ zc=this&&this.__extends||function(){var a=Object.setPrototypeOf||{__proto__:[]}i
       <p id="pca-sampling" class="notice">
         PCA is approximate.
         <paper-icon-button icon="help" class="help-icon"></paper-icon-button>
-      
+
       <div id="total-variance">Total variance</div>
       <paper-tooltip for="pca-sampling" position="top" animation-delay="0" fit-to-visible-bounds>
         For fast results, the data was sampled to [[getPcaSampleSizeText()]] points and randomly projected down to [[getPcaSampledDimText()]] dimensions.
       </paper-tooltip>
     </div>
-    
+
     <div data-panel="custom" class="ink-panel-content">
       <paper-dropdown-menu style="width: 100%" no-animations label="Search by">
         <paper-listbox attr-for-selected="value" class="dropdown-content" selected="{{customSelectedSearchByMetadataOption}}" slot="dropdown-content">
@@ -13272,7 +13260,7 @@ a.ProjectionsPanel=b;document.registerElement(b.prototype.is,b)})(wc||(wc={}));
 </div>
 <paper-toast id="toast" always-on-top></paper-toast>
 
-</template> 
+</template>
 <script>//~~WEBPATH~~/vz-projector/vz-projector.js
 zc=this&&this.__extends||function(){var a=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(b,c){b.__proto__=c}||function(b,c){for(var d in c)c.hasOwnProperty(d)&&(b[d]=c[d])};return function(b,c){function d(){this.constructor=b}a(b,c);b.prototype=null===c?Object.create(c):(d.prototype=c.prototype,new d)}}();
 (function(a){a.ProjectorPolymer=a.PolymerElement({is:"vz-projector",properties:{routePrefix:String,dataProto:{type:String,observer:"_dataProtoChanged"},servingMode:String,projectorConfigJsonPath:String,pageViewLogging:Boolean,eventLogging:Boolean}});var b=function(c){function d(){return null!==c&&c.apply(this,arguments)||this}zc(d,c);d.prototype.ready=function(){a.logging.setDomContainer(this);this.analyticsLogger=new a.AnalyticsLogger(this.pageViewLogging,this.eventLogging);this.analyticsLogger.logPageView();
@@ -13344,7 +13332,7 @@ vz-projector {
 
 <div id="container">
   <div id="appbar">
-    <div>Embedding Projector</div>
+    <div>Wikipedia2Vec Demonstration</div>
     <div class="icons">
       <a title="Documentation" target="_blank" href="[[documentationLink]]">
         <paper-icon-button icon="help-outline"></paper-icon-button>
@@ -13370,11 +13358,11 @@ vz-projector {
 Polymer({is:"vz-projector-app",properties:{pageViewLogging:{type:Boolean,value:!1},eventLogging:{type:Boolean,value:!1}}});</script>
 </dom-module>
 
-  
-  
-  
 
-  <title>Embedding projector - visualization of high-dimensional data</title>
+
+
+
+  <title>Wikipedia2Vec Demonstration</title>
   <style include="vz-projector-styles"></style>
   <style>
     html {
