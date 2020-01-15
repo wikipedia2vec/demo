@@ -10728,7 +10728,7 @@ paper-textarea {
 </style>
 
 
-<div id="bookmark-container">
+<div id="bookmark-container" style="display: none;">
   <div id="header">
     <div id="title">
       BOOKMARKS ([[savedStates.length]])
@@ -11412,7 +11412,8 @@ paper-dropdown-menu paper-item {
     </paper-dropdown-menu>
   </template>
 
-  <div hidden$="[[!_hasChoices(colorOptions)]]">
+  <!-- <div hidden$="[[!_hasChoices(colorOptions)]]"> -->
+  <div hidden$="[[!_hasChoices(colorOptions)]]" style="display: none;">
     <div class="colorlabel-container">
 
       <paper-dropdown-menu id="labelby" no-animations label="Label by">
@@ -11426,7 +11427,7 @@ paper-dropdown-menu paper-item {
       </paper-dropdown-menu>
 
       <paper-dropdown-menu id="colorby" no-animations label="Color by">
-        <paper-listbox attr-for-selected="value" class="dropdown-content" selected="{{selectedColorOptionName}}" slot="dropdown-content">
+        <paper-listbox attr-for-selected="value" class="dropdown-content" selected="{selectedColorOptionName}}" slot="dropdown-content">
           <template is="dom-repeat" items="[[colorOptions]]">
             <paper-item class$="[[getSeparatorClass(item.isSeparator)]]" value="[[item.name]]" label="[[item.name]]" disabled="[[item.isSeparator]]">
               [[item.name]]
@@ -11465,7 +11466,7 @@ paper-dropdown-menu paper-item {
       </paper-input>
     </div>
 
-    <div class="metadata-editor">
+    <div class="metadata-editor" style="display: none;">
       <paper-dropdown-menu no-animations label="Edit by">
         <paper-listbox attr-for-selected="value" class="dropdown-content" slot="dropdown-content" on-selected-item-changed="metadataEditorColumnChange" selected="{{metadataEditorColumn}}">
           <template is="dom-repeat" items="[[metadataFields]]">
@@ -11480,26 +11481,26 @@ paper-dropdown-menu paper-item {
     </div>
   </template>
   <div id="demo-data-buttons-container">
-    <span class="button-container">
+    <span class="button-container" style="display: none;">
       <paper-tooltip position="bottom" animation-delay="0" fit-to-visible-bounds>
         Load data from your computer
       </paper-tooltip>
       <paper-button id="upload" class="ink-button" onclick="dataDialog.open()">Load</paper-button>
     </span>
-    <span id="publish-container" class="button-container">
+    <span id="publish-container" class="button-container" style="display: none;">
       <paper-tooltip position="bottom" animation-delay="0" fit-to-visible-bounds>
         Publish your embedding visualization and data
       </paper-tooltip>
       <paper-button id="host-embedding" class="ink-button" onclick="projectorConfigDialog.open()">Publish</paper-button>
     </span>
-    <span class="button-container">
+    <span class="button-container" style="display: none;">
       <paper-tooltip position="bottom" animation-delay="0" fit-to-visible-bounds>
         Download the metadata with applied modifications
       </paper-tooltip>
       <paper-button class="ink-button" on-click="downloadMetadataClicked">Download</paper-button>
       <a href="#" id="downloadMetadataLink" hidden></a>
     </span>
-    <span id="label-button" class="button-container">
+    <span id="label-button" class="button-container" style="display: none;">
       <paper-tooltip position="bottom" animation-delay="0" fit-to-visible-bounds>
         Label selected metadata
       </paper-tooltip>
@@ -11613,7 +11614,7 @@ paper-dropdown-menu paper-item {
       it unit norm.
     </paper-tooltip>
   </paper-checkbox>
-  <div class="dirs">
+  <div class="dirs" style="display: none;">
     <table>
       <tr>
         <td>Checkpoint:</td>
@@ -11634,9 +11635,9 @@ zc=this&&this.__extends||function(){var a=Object.setPrototypeOf||{__proto__:[]}i
 metadataEditorInputChange:{type:Object},metadataEditorColumn:{type:String},metadataEditorColumnChange:{type:Object},metadataEditorButtonClicked:{type:Object},metadataEditorButtonDisabled:{type:Boolean},downloadMetadataClicked:{type:Boolean},superviseInput:{type:String},superviseInputTyping:{type:Object},superviseInputChange:{type:Object},superviseInputLabel:{type:String,value:"Ignored label"},superviseColumn:{type:String},superviseColumnChanged:{type:Object},showSuperviseSettings:{type:Boolean,value:!1}},
 observers:["_generateUiForNewCheckpointForRun(selectedRun)"]});var b=function(c){function d(){var e=null!==c&&c.apply(this,arguments)||this;e.forceCategoricalColoring=!1;return e}zc(d,c);d.prototype.ready=function(){this.normalizeData=!0;this.superviseInputSelected=""};d.prototype.initialize=function(e,g){var h=this;this.projector=e;this.dataProvider=g;this.setupUploadButtons();this.querySelector("#normalize-data-checkbox").addEventListener("change",function(){h.projector.setNormalizeData(h.normalizeData)});
 var k=this.querySelector("#force-categorical-checkbox");k.addEventListener("change",function(){h.setForceCategoricalColoring(k.checked)});this.dataProvider.retrieveRuns(function(l){h.runNames=l;0<h.runNames.length&&(h.selectedRun!=l[0]?h.selectedRun=l[0]:h._generateUiForNewCheckpointForRun(h.selectedRun))})};d.prototype.setForceCategoricalColoring=function(e){this.forceCategoricalColoring=e;this.querySelector("#force-categorical-checkbox").checked=this.forceCategoricalColoring;this.updateMetadataUI(this.spriteAndMetadata.stats,
-this.metadataFile);this._selectedColorOptionNameChanged()};d.prototype.getSeparatorClass=function(e){return e?"separator":null};d.prototype.metadataChanged=function(e,g){var h=this;this.spriteAndMetadata=e;null!=g&&(this.metadataFile=g);this.updateMetadataUI(this.spriteAndMetadata.stats,this.metadataFile);if(null==this.selectedColorOptionName||0===this.colorOptions.filter(function(l){return l.name===h.selectedColorOptionName}).length)this.selectedColorOptionName=this.colorOptions[0].name;var k=-1;
+this.metadataFile);this._selectedColorOptionNameChanged()};d.prototype.getSeparatorClass=function(e){return e?"separator":null};d.prototype.metadataChanged=function(e,g){var h=this;this.spriteAndMetadata=e;null!=g&&(this.metadataFile=g);this.updateMetadataUI(this.spriteAndMetadata.stats,this.metadataFile);if(null==this.selectedColorOptionName||0===this.colorOptions.filter(function(l){return l.name===h.selectedColorOptionName}).length)this.selectedColorOptionName="type";var k=-1;
 this.metadataFields=e.stats.map(function(l,m){l.isNumeric||-1!==k||(k=m);return l.name});if(null==this.metadataEditorColumn||0===this.metadataFields.filter(function(l){return l===h.metadataEditorColumn}).length)this.metadataEditorColumn=this.metadataFields[Math.max(0,k)];if(null==this.superviseColumn||0===this.metadataFields.filter(function(l){return l===h.superviseColumn}).length)this.superviseColumn=this.metadataFields[Math.max(0,k)],this.superviseInput="";this.superviseInputChange()};d.prototype.projectionChanged=
-function(e){if(e)switch(e.projectionType){case "tsne":this.set("showSuperviseSettings",!0);break;default:this.set("showSuperviseSettings",!1)}};d.prototype.onProjectorSelectionChanged=function(e,g){this.selectedPointIndices=e;this.neighborsOfFirstPoint=g;this.metadataEditorInputChange()};d.prototype.addWordBreaks=function(e){return null==e?"":e.replace(/([\/=-_,])/g,"$1\x3cwbr\x3e")};d.prototype.updateMetadataUI=function(e,g){var h=this,k=this.querySelector("#metadata-file");k.innerHTML=this.addWordBreaks(g);
+function(e){if(e)switch(e.projectionType){case "tsne":this.set("showSuperviseSettings",0);break;default:this.set("showSuperviseSettings",!1)}};d.prototype.onProjectorSelectionChanged=function(e,g){this.selectedPointIndices=e;this.neighborsOfFirstPoint=g;this.metadataEditorInputChange()};d.prototype.addWordBreaks=function(e){return null==e?"":e.replace(/([\/=-_,])/g,"$1\x3cwbr\x3e")};d.prototype.updateMetadataUI=function(e,g){var h=this,k=this.querySelector("#metadata-file");k.innerHTML=this.addWordBreaks(g);
 k.title=g;var l=-1;this.labelOptions=e.map(function(m,n){m.isNumeric||-1!==l||(l=n);return m.name});if(null==this.selectedLabelOption||0===this.labelOptions.filter(function(m){return m===h.selectedLabelOption}).length)this.selectedLabelOption=this.labelOptions[Math.max(0,l)];if(null==this.metadataEditorColumn||0===this.labelOptions.filter(function(m){return m===h.metadataEditorColumn}).length)this.metadataEditorColumn=this.labelOptions[Math.max(0,l)];g=[{name:"No color map"}];e=e.filter(function(m){return!m.tooManyUniqueValues||
 m.isNumeric}).map(function(m){if(h.forceCategoricalColoring||!m.tooManyUniqueValues){var n=d3.scaleOrdinal(d3.schemeCategory10);var q=n.range();var p=q.map(function(v,u){return q[3*u%q.length]});var t=m.uniqueEntries;n.range(p).domain(t.map(function(v){return v.label}));p=m.uniqueEntries.length;p=p+" "+(p>q.length?" non-unique":"")+" colors"}else{var r=[{color:"#ffffdd",value:m.min},{color:"#1f2d86",value:m.max}];n=d3.scaleLinear().domain(r.map(function(v){return v.value})).range(r.map(function(v){return v.color}));
 p="gradient"}return{name:m.name,desc:p,map:n,items:t,thresholds:r,tooManyUniqueValues:m.tooManyUniqueValues}});0<e.length&&g.push({name:"Metadata",isSeparator:!0});this.colorOptions=g.concat(e)};d.prototype.metadataEditorContext=function(e){this.metadataEditorButtonDisabled=!e;this.projector&&this.projector.metadataEditorContext(e,this.metadataEditorColumn)};d.prototype.metadataEditorInputChange=function(){var e=this.metadataEditorColumn,g=this.metadataEditorInput,h=this.selectedPointIndices.length+
@@ -12813,7 +12814,7 @@ zc=this&&this.__extends||function(){var a=Object.setPrototypeOf||{__proto__:[]}i
         </paper-slider>
         <span></span>
       </div>
-      <div class="slider tsne-supervise-factor">
+      <div class="slider tsne-supervise-factor" style="display: none;">
         <label>
           Supervise
           <paper-icon-button icon="help" class="help-icon"></paper-icon-button>
@@ -13333,7 +13334,7 @@ vz-projector {
 <div id="container">
   <div id="appbar">
     <div>Wikipedia2Vec Demonstration</div>
-    <div class="icons">
+    <div class="icons" style="display: none;">
       <a title="Documentation" target="_blank" href="[[documentationLink]]">
         <paper-icon-button icon="help-outline"></paper-icon-button>
         <paper-tooltip position="bottom" animation-delay="0" fit-to-visible-bounds>
