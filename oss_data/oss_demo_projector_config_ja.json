@@ -1,0 +1,121 @@
+{
+  "embeddings": [
+    {
+      "metadataPath": "https://wikipedia2vec.github.io/demo/projector_files/ja_data.tsv",
+      "tensorName": "Japanese 10K",
+      "tensorPath": "https://wikipedia2vec.github.io/demo/projector_files/ja_emb.tsv",
+      "tensorShape": [
+        10000,
+        100
+      ]
+    },
+    {
+      "metadataPath": "https://wikipedia2vec.github.io/demo/projector_files/en_data.tsv",
+      "tensorName": "English 10K",
+      "tensorPath": "https://wikipedia2vec.github.io/demo/projector_files/en_emb.tsv",
+      "tensorShape": [
+        10000,
+        100
+      ]
+    },
+    {
+      "metadataPath": "https://wikipedia2vec.github.io/demo/projector_files/en_nolg_data.tsv",
+      "tensorName": "English 10K (w/o link graph)",
+      "tensorPath": "https://wikipedia2vec.github.io/demo/projector_files/en_nolg_emb.tsv",
+      "tensorShape": [
+        10000,
+        100
+      ]
+    },
+    {
+      "metadataPath": "https://wikipedia2vec.github.io/demo/projector_files/ar_data.tsv",
+      "tensorName": "Arabic 10K",
+      "tensorPath": "https://wikipedia2vec.github.io/demo/projector_files/ar_emb.tsv",
+      "tensorShape": [
+        10000,
+        100
+      ]
+    },
+    {
+      "metadataPath": "https://wikipedia2vec.github.io/demo/projector_files/zh_data.tsv",
+      "tensorName": "Chinese 10K",
+      "tensorPath": "https://wikipedia2vec.github.io/demo/projector_files/zh_emb.tsv",
+      "tensorShape": [
+        10000,
+        100
+      ]
+    },
+    {
+      "metadataPath": "https://wikipedia2vec.github.io/demo/projector_files/nl_data.tsv",
+      "tensorName": "Dutch 10K",
+      "tensorPath": "https://wikipedia2vec.github.io/demo/projector_files/nl_emb.tsv",
+      "tensorShape": [
+        10000,
+        100
+      ]
+    },
+    {
+      "metadataPath": "https://wikipedia2vec.github.io/demo/projector_files/fr_data.tsv",
+      "tensorName": "French 10K",
+      "tensorPath": "https://wikipedia2vec.github.io/demo/projector_files/fr_emb.tsv",
+      "tensorShape": [
+        10000,
+        100
+      ]
+    },
+    {
+      "metadataPath": "https://wikipedia2vec.github.io/demo/projector_files/de_data.tsv",
+      "tensorName": "German 10K",
+      "tensorPath": "https://wikipedia2vec.github.io/demo/projector_files/de_emb.tsv",
+      "tensorShape": [
+        10000,
+        100
+      ]
+    },
+    {
+      "metadataPath": "https://wikipedia2vec.github.io/demo/projector_files/it_data.tsv",
+      "tensorName": "Italian 10K",
+      "tensorPath": "https://wikipedia2vec.github.io/demo/projector_files/it_emb.tsv",
+      "tensorShape": [
+        10000,
+        100
+      ]
+    },
+    {
+      "metadataPath": "https://wikipedia2vec.github.io/demo/projector_files/pl_data.tsv",
+      "tensorName": "Polish 10K",
+      "tensorPath": "https://wikipedia2vec.github.io/demo/projector_files/pl_emb.tsv",
+      "tensorShape": [
+        10000,
+        100
+      ]
+    },
+    {
+      "metadataPath": "https://wikipedia2vec.github.io/demo/projector_files/pt_data.tsv",
+      "tensorName": "Portuguese 10K",
+      "tensorPath": "https://wikipedia2vec.github.io/demo/projector_files/pt_emb.tsv",
+      "tensorShape": [
+        10000,
+        100
+      ]
+    },
+    {
+      "metadataPath": "https://wikipedia2vec.github.io/demo/projector_files/ru_data.tsv",
+      "tensorName": "Russian 10K",
+      "tensorPath": "https://wikipedia2vec.github.io/demo/projector_files/ru_emb.tsv",
+      "tensorShape": [
+        10000,
+        100
+      ]
+    },
+    {
+      "metadataPath": "https://wikipedia2vec.github.io/demo/projector_files/es_data.tsv",
+      "tensorName": "Spanish 10K",
+      "tensorPath": "https://wikipedia2vec.github.io/demo/projector_files/es_emb.tsv",
+      "tensorShape": [
+        10000,
+        100
+      ]
+    }
+  ]
+}
