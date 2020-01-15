@@ -11381,7 +11381,7 @@ paper-dropdown-menu paper-item {
 }
 
 </style>
-<div class="title">DATA</div>
+<div class="title">MODEL</div>
 <div class="container">
 
   <template is="dom-if" if="[[_hasChoices(runNames)]]">
@@ -12720,14 +12720,14 @@ zc=this&&this.__extends||function(){var a=Object.setPrototypeOf||{__proto__:[]}i
   <div class="ink-panel-header">
     <div class="ink-tab-group">
 
-      <div data-tab="umap" id="umap-tab" class="ink-tab projection-tab">UMAP</div>
-      <paper-tooltip for="umap-tab" position="bottom" animation-delay="0" fit-to-visible-bounds>
-        uniform manifold approximation and projection
-      </paper-tooltip>
-
       <div data-tab="tsne" id="tsne-tab" class="ink-tab projection-tab">t-SNE</div>
       <paper-tooltip for="tsne-tab" position="bottom" animation-delay="0" fit-to-visible-bounds>
         t-distributed stochastic neighbor embedding
+      </paper-tooltip>
+
+      <div data-tab="umap" id="umap-tab" class="ink-tab projection-tab">UMAP</div>
+      <paper-tooltip for="umap-tab" position="bottom" animation-delay="0" fit-to-visible-bounds>
+        uniform manifold approximation and projection
       </paper-tooltip>
 
       <div data-tab="pca" id="pca-tab" class="ink-tab projection-tab">PCA</div>
@@ -12735,7 +12735,7 @@ zc=this&&this.__extends||function(){var a=Object.setPrototypeOf||{__proto__:[]}i
         Principal component analysis
       </paper-tooltip>
 
-      <div data-tab="custom" id="custom-tab" class="ink-tab projection-tab" title="Linear projection of two custom vectors">Custom</div>
+      <div data-tab="custom" id="custom-tab" class="ink-tab projection-tab" title="Linear projection of two custom vectors" style="display: none">Custom</div>
       <paper-tooltip for="custom-tab" position="bottom" animation-delay="0" fit-to-visible-bounds>
         Search for two vectors upon which to project all points.
       </paper-tooltip>
