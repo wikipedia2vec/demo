@@ -32,7 +32,7 @@
       "tensorName": "Chinese 10K",
       "tensorPath": "https://wikipedia2vec.github.io/demo/projector_files/zh_emb.tsv",
       "tensorShape": [
-        10000,
+        9995,
         100
       ]
     },

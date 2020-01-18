@@ -2,6 +2,7 @@
 
 import click
 import json
+import re
 from iso639 import languages
 
 from wikipedia2vec import Wikipedia2Vec
@@ -28,6 +29,8 @@ def main(model_file, tensor_file, metadata_file, config_file, model_name, base_u
         with open(metadata_file, mode='w', encoding='utf-8') as meta:
             meta.write('item\ttype\tcount\n')
             for word in words:
+                if re.match(r"^\s*$", word.text):
+                    continue
                 vector_str = '\t'.join(['%.5f' % v for v in model.get_vector(word)])
                 ten.write(vector_str + '\n')
                 meta.write('WORD/%s\tword\t%d\n' % (word.text, word.count))
